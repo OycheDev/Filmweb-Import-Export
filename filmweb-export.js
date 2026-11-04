@@ -213,7 +213,7 @@
   console.log(
     `Gotowe. Zapisano: ${named.length}. Z numerem IMDb: ${imdbItems.filter((item) => item.imdb_id).length}. ` +
     `Pominięto: ${titles.length - named.length}.\n` +
-    "IMDb: https://www.imdb.com/labs/import_watch_history/\n" +
+    "IMDb: https://www.imdb.com/labs/import-watch-history/\n" +
     "Letterboxd: https://letterboxd.com/import/"
   );
   if (problems.length) {

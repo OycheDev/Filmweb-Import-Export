@@ -54,7 +54,7 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 **Z IMDb**
 
 1. Zaloguj się i otwórz [swoje oceny](https://www.imdb.com/list/ratings/).
-2. Kliknij **Export**.
+2. Kliknij **Actions**, a potem **Export**.
 3. Gdy plik będzie gotowy, pobierz go ze strony [Exports](https://www.imdb.com/exports/).
 
 </td>
@@ -63,7 +63,7 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 **From IMDb**
 
 1. Log in and open [your ratings](https://www.imdb.com/list/ratings/).
-2. Click **Export**.
+2. Click **Actions**, then **Export**.
 3. When the file is ready, download it from the [Exports](https://www.imdb.com/exports/) page.
 
 </td>
@@ -128,7 +128,7 @@ Titles you have already rated are left unchanged. Titles that could not be match
 
 **Na IMDb**
 
-1. Zaloguj się i otwórz [Import Your Watch History](https://www.imdb.com/labs/import_watch_history/).
+1. Zaloguj się i otwórz [Import Your Watch History](https://www.imdb.com/labs/import-watch-history/).
 2. Wgraj `imdb-import.json` z eksportu Filmwebu.
 
 Oceny się przenoszą, ale daty mogą ustawić się na dzień importu.
@@ -138,7 +138,7 @@ Oceny się przenoszą, ale daty mogą ustawić się na dzień importu.
 
 **To IMDb**
 
-1. Log in and open [Import Your Watch History](https://www.imdb.com/labs/import_watch_history/).
+1. Log in and open [Import Your Watch History](https://www.imdb.com/labs/import-watch-history/).
 2. Upload `imdb-import.json` from the Filmweb export.
 
 Ratings carry over, but dates may be set to the day of the import.
