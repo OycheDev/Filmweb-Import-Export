@@ -1,5 +1,17 @@
 # Filmweb ⇄ IMDb ⇄ Letterboxd
 
+**🇵🇱 Przenoś oceny filmów i seriali między Filmwebem, IMDb i Letterboxd. Nic nie instalujesz: skrypty wklejasz do przeglądarki.**
+
+**🇬🇧 Move your film and TV ratings between Filmweb, IMDb and Letterboxd. Nothing to install: you paste the scripts into your browser.**
+
+### [📤 Eksport / Export](#export) · [📥 Import](#import) · [⚠️ Ważne / Good to know](#good-to-know) · [💡 Dlaczego / Why](#why)
+
+---
+
+<a name="export"></a>
+
+# 📤 Eksport / Export
+
 <table>
 <tr>
 <th width="50%">🇵🇱 Polski</th>
@@ -8,22 +20,7 @@
 <tr>
 <td valign="top">
 
-Przenoś oceny filmów i seriali między Filmwebem, IMDb i Letterboxd. Nic nie instalujesz: skrypty wklejasz do przeglądarki.
-
-</td>
-<td valign="top">
-
-Move your film and TV ratings between Filmweb, IMDb and Letterboxd. Nothing to install: you paste the scripts into your browser.
-
-</td>
-</tr>
-<tr>
-<th colspan="2">Eksport / Export</th>
-</tr>
-<tr>
-<td valign="top">
-
-**Z Filmwebu**
+### Z Filmwebu
 
 1. Zaloguj się na [filmweb.pl](https://www.filmweb.pl).
 2. Naciśnij `F12` i wejdź w zakładkę **Console**.
@@ -36,7 +33,7 @@ Jeśli Chrome zablokuje wklejanie, wpisz `allow pasting` i naciśnij `Enter`.
 </td>
 <td valign="top">
 
-**From Filmweb**
+### From Filmweb
 
 1. Log in to [filmweb.pl](https://www.filmweb.pl).
 2. Press `F12` and open the **Console** tab.
@@ -51,7 +48,7 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 <tr>
 <td valign="top">
 
-**Z IMDb**
+### Z IMDb
 
 1. Zaloguj się i otwórz [swoje oceny](https://www.imdb.com/list/ratings/).
 2. Kliknij **Actions**, a potem **Export**.
@@ -60,7 +57,7 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 </td>
 <td valign="top">
 
-**From IMDb**
+### From IMDb
 
 1. Log in and open [your ratings](https://www.imdb.com/list/ratings/).
 2. Click **Actions**, then **Export**.
@@ -71,7 +68,7 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 <tr>
 <td valign="top">
 
-**Z Letterboxd**
+### Z Letterboxd
 
 1. Zaloguj się i wejdź w [ustawienia danych](https://letterboxd.com/settings/data/).
 2. Kliknij **Export your data**.
@@ -80,7 +77,7 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 </td>
 <td valign="top">
 
-**From Letterboxd**
+### From Letterboxd
 
 1. Log in and open your [data settings](https://letterboxd.com/settings/data/).
 2. Click **Export your data**.
@@ -88,13 +85,23 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 
 </td>
 </tr>
+</table>
+
+---
+
+<a name="import"></a>
+
+# 📥 Import
+
+<table>
 <tr>
-<th colspan="2">Import</th>
+<th width="50%">🇵🇱 Polski</th>
+<th width="50%">🇬🇧 English</th>
 </tr>
 <tr>
 <td valign="top">
 
-**Na Filmweb**
+### Na Filmweb
 
 1. Zaloguj się na [filmweb.pl](https://www.filmweb.pl).
 2. Naciśnij `F12` i wejdź w zakładkę **Console**.
@@ -109,7 +116,7 @@ Już ocenione tytuły nie są zmieniane. Tytuły, których nie udało się dopas
 </td>
 <td valign="top">
 
-**To Filmweb**
+### To Filmweb
 
 1. Log in to [filmweb.pl](https://www.filmweb.pl).
 2. Press `F12` and open the **Console** tab.
@@ -126,7 +133,7 @@ Titles you have already rated are left unchanged. Titles that could not be match
 <tr>
 <td valign="top">
 
-**Na IMDb**
+### Na IMDb
 
 1. Zaloguj się i otwórz [Import Your Watch History](https://www.imdb.com/labs/import-watch-history/).
 2. Wgraj `imdb-import.json` z eksportu Filmwebu.
@@ -136,7 +143,7 @@ Oceny się przenoszą, ale daty mogą ustawić się na dzień importu.
 </td>
 <td valign="top">
 
-**To IMDb**
+### To IMDb
 
 1. Log in and open [Import Your Watch History](https://www.imdb.com/labs/import-watch-history/).
 2. Upload `imdb-import.json` from the Filmweb export.
@@ -148,7 +155,7 @@ Ratings carry over, but dates may be set to the day of the import.
 <tr>
 <td valign="top">
 
-**Na Letterboxd**
+### Na Letterboxd
 
 1. Zaloguj się i otwórz [stronę importu](https://letterboxd.com/import/).
 2. Wgraj pliki `letterboxd-filmy-*.csv` z eksportu Filmwebu.
@@ -159,7 +166,7 @@ Letterboxd to głównie serwis filmowy, więc `letterboxd-seriale-*.csv` może d
 </td>
 <td valign="top">
 
-**To Letterboxd**
+### To Letterboxd
 
 1. Log in and open the [import page](https://letterboxd.com/import/).
 2. Upload the `letterboxd-filmy-*.csv` files from the Filmweb export.
@@ -169,8 +176,18 @@ Letterboxd is mainly for films, so `letterboxd-seriale-*.csv` may match poorly.
 
 </td>
 </tr>
+</table>
+
+---
+
+<a name="good-to-know"></a>
+
+# ⚠️ Ważne / Good to know
+
+<table>
 <tr>
-<th colspan="2">Ważne / Good to know</th>
+<th width="50%">🇵🇱 Polski</th>
+<th width="50%">🇬🇧 English</th>
 </tr>
 <tr>
 <td valign="top">
@@ -190,6 +207,33 @@ Letterboxd is mainly for films, so `letterboxd-seriale-*.csv` may match poorly.
 </tr>
 </table>
 
-## Licencja / License
+---
+
+<a name="why"></a>
+
+# 💡 Dlaczego to powstało / Why I made this
+
+<table>
+<tr>
+<th width="50%">🇵🇱 Polski</th>
+<th width="50%">🇬🇧 English</th>
+</tr>
+<tr>
+<td valign="top">
+
+Denerwował mnie przede wszystkim brak importu na Filmweb. Kiedyś chciałem się na niego przenieść, a ręczne przepisywanie ponad 500 filmów byłoby straszne. Dlatego powstał ten projekt: żeby oceny dało się po prostu przenieść, a nie wpisywać wszystko od nowa.
+
+</td>
+<td valign="top">
+
+What annoyed me most was the lack of an import to Filmweb. I once wanted to move there, and retyping more than 500 films by hand would have been awful. That is why I made this project: so you can simply move your ratings instead of entering everything again.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📄 Licencja / License
 
 [MIT](LICENSE). Oparte na / Based on [Filmweb2Letterboxd](https://github.com/JSerwatka/Filmweb2Letterboxd) by Jakub Serwatka.
