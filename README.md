@@ -1,8 +1,8 @@
 # Filmweb ⇄ IMDb ⇄ Letterboxd
 
-**🇵🇱 Przenoś oceny filmów i seriali między Filmwebem, IMDb i Letterboxd. Nic nie instalujesz: skrypty wklejasz do przeglądarki.**
+**🇵🇱 Przenoś oceny filmów i seriali między Filmwebem, IMDb i Letterboxd, a z Upflix na Filmweb. Nic nie instalujesz: skrypty wklejasz do przeglądarki.**
 
-**🇬🇧 Move your film and TV ratings between Filmweb, IMDb and Letterboxd. Nothing to install: you paste the scripts into your browser.**
+**🇬🇧 Move your film and TV ratings between Filmweb, IMDb and Letterboxd, and from Upflix to Filmweb. Nothing to install: you paste the scripts into your browser.**
 
 ### [📤 Eksport / Export](#export) · [📥 Import](#import) · [⚠️ Ważne / Good to know](#good-to-know) · [💡 Dlaczego / Why](#why)
 
@@ -25,8 +25,8 @@
 1. Zaloguj się na [filmweb.pl](https://www.filmweb.pl).
 2. Naciśnij `F12` i wejdź w zakładkę **Console**.
 3. Skopiuj całą zawartość [`filmweb-export.js`](filmweb-export.js), wklej ją do konsoli i naciśnij `Enter`.
-4. Nie przełączaj karty, aż w konsoli pojawi się „Gotowe”.
-5. Pobiorą się: `imdb-import.json` oraz pliki `letterboxd-*.csv`.
+4. W oknie, które się pojawi, kliknij **Pobierz oceny z Filmwebu** i nie przełączaj karty, dopóki pobieranie się nie skończy.
+5. Wybierz platformę: **IMDb** albo **Letterboxd**. Plik pobierze się dopiero po kliknięciu.
 
 Jeśli Chrome zablokuje wklejanie, wpisz `allow pasting` i naciśnij `Enter`.
 
@@ -38,8 +38,8 @@ Jeśli Chrome zablokuje wklejanie, wpisz `allow pasting` i naciśnij `Enter`.
 1. Log in to [filmweb.pl](https://www.filmweb.pl).
 2. Press `F12` and open the **Console** tab.
 3. Copy all of [`filmweb-export.js`](filmweb-export.js), paste it into the console and press `Enter`.
-4. Stay on the tab until the console says "Gotowe" (done).
-5. You will get `imdb-import.json` and `letterboxd-*.csv` files.
+4. In the window that appears, click **EN** for English, click **Get my Filmweb ratings** and stay on the tab until it finishes.
+5. Choose a platform: **IMDb** or **Letterboxd**. The file is created only when you click.
 
 If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 
@@ -85,6 +85,26 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 
 </td>
 </tr>
+<tr>
+<td valign="top">
+
+### Z Upflix
+
+1. Zaloguj się i wejdź w [ustawienia konta](https://upflix.pl/user/settings/account).
+2. Pobierz eksport swoich danych.
+3. Najważniejszy jest plik `title_ratings.csv`. Wgrasz go na Filmweb przez `filmweb-import.js`.
+
+</td>
+<td valign="top">
+
+### From Upflix
+
+1. Log in and open your [account settings](https://upflix.pl/user/settings/account).
+2. Download the export of your data.
+3. The main file is `title_ratings.csv`. Upload it to Filmweb with `filmweb-import.js`.
+
+</td>
+</tr>
 </table>
 
 ---
@@ -106,12 +126,12 @@ If Chrome blocks pasting, type `allow pasting` and press `Enter`.
 1. Zaloguj się na [filmweb.pl](https://www.filmweb.pl).
 2. Naciśnij `F12` i wejdź w zakładkę **Console**.
 3. Skopiuj całą zawartość [`filmweb-import.js`](filmweb-import.js), wklej ją do konsoli i naciśnij `Enter`.
-4. W oknie, które się pojawi, wybierz `ratings.csv` z IMDb lub Letterboxd.
+4. W oknie, które się pojawi, wybierz `ratings.csv` z IMDb lub Letterboxd albo `title_ratings.csv` z Upflix.
 5. Sprawdź podsumowanie. Do tego momentu nic nie jest zapisywane.
 6. Kliknij **Zapisz**. Zacznij od kilku ocen i zobacz wynik na profilu.
 7. Możesz też wgrać `watched.csv` z Letterboxd, żeby dodać filmy bez oceny.
 
-Już ocenione tytuły nie są zmieniane. Tytuły, których nie udało się dopasować, zobaczysz pod przyciskiem **Pokaż pominięte tytuły**.
+Już ocenione tytuły nie są zmieniane. Tytuły, których nie udało się dopasować, zobaczysz pod przyciskiem **Pokaż pominięte tytuły**. Filmweb przyjmuje tylko pełne oceny, więc np. 7,5 z Upflix zapisze się jako 8.
 
 </td>
 <td valign="top">
@@ -121,12 +141,12 @@ Już ocenione tytuły nie są zmieniane. Tytuły, których nie udało się dopas
 1. Log in to [filmweb.pl](https://www.filmweb.pl).
 2. Press `F12` and open the **Console** tab.
 3. Copy all of [`filmweb-import.js`](filmweb-import.js), paste it into the console and press `Enter`.
-4. In the window that appears, click **EN** to switch to English, then choose `ratings.csv` from IMDb or Letterboxd.
+4. In the window that appears, click **EN** to switch to English, then choose `ratings.csv` from IMDb or Letterboxd, or `title_ratings.csv` from Upflix.
 5. Check the summary. Nothing is saved up to this point.
 6. Click **Save**. Start with a few ratings and check your profile.
 7. You can also upload Letterboxd's `watched.csv` to add unrated films.
 
-Titles you have already rated are left unchanged. Titles that could not be matched are listed under **Show skipped titles**.
+Titles you have already rated are left unchanged. Titles that could not be matched are listed under **Show skipped titles**. Filmweb accepts whole ratings only, so a 7.5 from Upflix is saved as 8.
 
 </td>
 </tr>
@@ -194,14 +214,14 @@ Letterboxd is mainly for films, so `letterboxd-seriale-*.csv` may match poorly.
 
 - Skrypty działają tylko w Twojej przeglądarce, na Twoim koncie.
 - Używasz ich na własną odpowiedzialność. Masowy import może wyglądać dla serwisu jak działanie automatu.
-- Filmweb, IMDb i Letterboxd mogą zmienić swoje strony, a wtedy skrypt przestanie działać.
+- Filmweb, IMDb, Letterboxd i Upflix mogą zmienić swoje strony, a wtedy skrypt przestanie działać.
 
 </td>
 <td valign="top">
 
 - The scripts run only in your browser, on your own account.
 - Use them at your own risk. A bulk import may look like automated activity to the service.
-- Filmweb, IMDb and Letterboxd can change their sites, which may break the scripts.
+- Filmweb, IMDb, Letterboxd and Upflix can change their sites, which may break the scripts.
 
 </td>
 </tr>

@@ -71,7 +71,7 @@
       noteAmbiguousText: "nie zapiszą się, wybierz właściwy ręcznie.",
       unrated: "bez oceny",
       confirmClose: "Trwa praca skryptu. Zamknąć okno?",
-      unknownFile: "Nie rozpoznano pliku. Użyj ratings.csv z IMDb lub ratings.csv, watched.csv albo diary.csv z Letterboxd.",
+      unknownFile: "Nie rozpoznano pliku. Użyj ratings.csv z IMDb, ratings.csv, watched.csv lub diary.csv z Letterboxd albo title_ratings.csv z Upflix.",
       emptyFile: "W pliku nie ma żadnych tytułów.",
       reportFile: "filmweb-import-raport.csv",
       reportColumns: ["Tytuł", "Rok", "Ocena", "Data", "IMDb", "Status", "Filmweb ID", "Tytuł Filmweb", "Rok Filmweb"],
@@ -134,7 +134,7 @@
       noteAmbiguousText: "will not be saved, pick the right one manually.",
       unrated: "unrated",
       confirmClose: "The script is still working. Close the window?",
-      unknownFile: "File not recognized. Use ratings.csv from IMDb or ratings.csv, watched.csv or diary.csv from Letterboxd.",
+      unknownFile: "File not recognized. Use ratings.csv from IMDb, ratings.csv, watched.csv or diary.csv from Letterboxd, or title_ratings.csv from Upflix.",
       emptyFile: "There are no titles in this file.",
       reportFile: "filmweb-import-report.csv",
       reportColumns: ["Title", "Year", "Rating", "Date", "IMDb", "Status", "Filmweb ID", "Filmweb title", "Filmweb year"],
@@ -314,6 +314,16 @@
     isSeries: false,
   });
 
+  const fromUpflixExport = (row) => ({
+    title: row.original_title || row.title,
+    alternateTitle: row.title,
+    year: Number(row.year) || 0,
+    rating: toRating(Math.round(Number(row.rating))),
+    date: toDate(row.rated_at),
+    imdbId: row.imdb_id ?? "",
+    isSeries: String(row.type) !== "1",
+  });
+
   const fromJson = (row) => ({
     title: row.title ?? "",
     alternateTitle: "",
@@ -333,6 +343,7 @@
     if ("Const" in first) return rows.map(fromImdb);
     if ("Letterboxd URI" in first) return rows.map(fromLetterboxd);
     if ("Rating10" in first) return rows.map(fromFilmwebExport);
+    if ("video_id" in first) return rows.map(fromUpflixExport);
     throw translatedError("unknownFile");
   };
 
@@ -516,7 +527,7 @@
     row.append(element("span", { textContent: `${service}: ` }, `color:${COLORS.text};font-weight:700`));
     files.forEach((name, index) => {
       if (index) row.append(", ");
-      const isMain = name === "ratings.csv";
+      const isMain = name === "ratings.csv" || name === "title_ratings.csv";
       row.append(element("span", { textContent: name }, isMain ? `color:${COLORS.accent};font-weight:700` : ""));
     });
     return row;
@@ -525,6 +536,7 @@
   sourceFiles.append(
     sourceRow("IMDb", ["ratings.csv"]),
     sourceRow("Letterboxd", ["ratings.csv", "watched.csv", "diary.csv"]),
+    sourceRow("Upflix", ["title_ratings.csv"]),
     sourceOrder
   );
   const fileRow = element("div", {}, "display:flex;align-items:center;gap:10px;margin-top:12px");
